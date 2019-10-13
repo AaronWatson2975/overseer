@@ -17,6 +17,7 @@
   "main": "src/electron-starter.js",
   "build": {
     "appId": "io.github.aaronwatson2975",
+    "extends": null,
     "publish": "github",
     "dmg": {
       "contents": [
@@ -33,11 +34,11 @@
       ]
     },
     "appImage": {
-      "license": "MIT"
+      "license": "LICENSE"
     },
     "nsis": {
       "createDesktopShortcut": "always",
-      "license": "MIT"
+      "license": "LICENSE"
     }
   },
   "scripts": {
