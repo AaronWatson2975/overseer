@@ -2,9 +2,18 @@
 This is the start of a new project to help make my life easier when working with Android devices.  Stay tuned for more details.
 
 ## Status
+
+# Master
 <p float="left">
   <img alt="build status badge" src="https://travis-ci.com/AaronWatson2975/overseer.svg?branch=master"/>
   <img alt="test coverage badge" src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=master" />
+  <img alt="code quality badge" src="https://api.codacy.com/project/badge/Grade/22e24de785134902b017645e21ddce21?isInternal=true" />
+  </p>
+  
+# Develop
+<p float="left">
+  <img alt="build status badge" src="https://travis-ci.com/AaronWatson2975/overseer.svg?branch=develop"/>
+  <img alt="test coverage badge" src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=develop" />
   <img alt="code quality badge" src="https://api.codacy.com/project/badge/Grade/22e24de785134902b017645e21ddce21?isInternal=true" />
   </p>
 
