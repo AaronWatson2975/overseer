@@ -75,4 +75,5 @@ before_cache:
 branches:
   only:
   - master
+  - develop
   - prod
