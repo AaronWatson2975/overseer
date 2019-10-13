@@ -44,6 +44,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+
+### `yarn run electron`
+Launch a running version of the app in electron and connect it to the dev server running on port 3000, this will allow live real time updates to the app as you develop.
+
+
 ### `yarn generate-documentation`
 
 Runs JSDoc to update all the documentation for the project.
