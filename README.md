@@ -1,7 +1,11 @@
 # Overseer
 This is the start of a new project to help make my life easier when working with Android devices.  Stay tuned for more details.
 
-
+## Status
+<p float="left">
+  <img src="https://travis-ci.com/AaronWatson2975/overseer.svg?branch=master"/>
+  <img src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=master" />
+  </p>
 
 ## Stack
 <p float="left">
@@ -24,6 +28,11 @@ This is the start of a new project to help make my life easier when working with
 
 ## Documentation
 The most up-to-date documentation can be found <a href="https://aaronwatson2975.github.io/overseer/">here</a>.
+
+
+
+
+
 
 ## Available Scripts
 
