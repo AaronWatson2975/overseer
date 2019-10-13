@@ -46,6 +46,7 @@ before_script:
 # on PRs and merges to master and prod run tests and build the app
 script:
   - node -v
+  - yarn test
   - yarn report-coverage
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
