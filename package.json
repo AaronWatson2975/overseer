@@ -44,7 +44,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "CI=true react-scripts test",
+    "test": "CI=true react-scripts test --coverage",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "eject": "react-scripts eject",
     "electron": "electron .",
     "generate-documentation": "npx jsdoc -r ./src/ --destination ./docs",
@@ -74,7 +75,8 @@
     ]
   },
   "devDependencies": {
-    "electron-builder": "^21.2.0",
-    "electron": "^6.0.12"
+    "coveralls": "^3.0.7",
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0"
   }
 }
