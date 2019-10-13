@@ -6,9 +6,7 @@ This is the start of a new project to help make my life easier when working with
 ## Stack
 <p float="left">
   <img alt="reactjs logo" src="https://cdn.auth0.com/blog/react-js/react.png" width="150" />
-  <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="125" />
-  <img alt="typescript logo" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="80" />
-  <img alt="sass logo" src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" width="100" />
+  <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="140" />
 </p>
 
 <p float="left">
