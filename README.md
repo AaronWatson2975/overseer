@@ -3,27 +3,25 @@ This is the start of a new project to help make my life easier when working with
 
 ## Status
 <p float="left">
-  <img src="https://travis-ci.com/AaronWatson2975/overseer.svg?branch=master"/>
-  <img src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=master" />
+  <img alt="build status badge" src="https://travis-ci.com/AaronWatson2975/overseer.svg?branch=master"/>
+  <img alt="test coverage badge" src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=master" />
+  <img alt="code quality badge" src="https://api.codacy.com/project/badge/Grade/22e24de785134902b017645e21ddce21?isInternal=true" />
   </p>
 
 ## Stack
 <p float="left">
-  <img alt="reactjs logo" src="https://cdn.auth0.com/blog/react-js/react.png" width="150" />
-  <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="140" />
-</p>
-
-<p float="left">
-  <img alt="typescript logo" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="80" />
-  <img alt="sass logo" src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" width="100" />
+  <img alt="reactjs logo" src="https://cdn.auth0.com/blog/react-js/react.png" width="70" />
+  <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="70" />
+  <img alt="typescript logo" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="50" />
+  <img alt="sass logo" src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" width="70" />
 </p>
 
 ## CI, Testing and Documentation
 <p float="left">
-  <img alt="travis-ci logo" src="https://travis-ci.com/images/logos/Tessa-1.png" width="100" />
-  <img alt="jest logo" src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="80" />
-  <img alt="enzyme logo" src="https://clipart.info/images/ccovers/1499955328airbnb-2-logo-png.png" width="100" />
-  <img alt="jsdoc logo" src="https://blog.michelletorres.mx/wp-content/uploads/2017/10/jsdoc-logo.jpg" width="100" /> 
+  <img alt="travis-ci logo" src="https://travis-ci.com/images/logos/Tessa-1.png" width="70" />
+  <img alt="jest logo" src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="60" />
+  <img alt="enzyme logo" src="https://clipart.info/images/ccovers/1499955328airbnb-2-logo-png.png" width="70" />
+  <img alt="jsdoc logo" src="https://blog.michelletorres.mx/wp-content/uploads/2017/10/jsdoc-logo.jpg" width="70" /> 
 </p>
 
 ## Documentation
