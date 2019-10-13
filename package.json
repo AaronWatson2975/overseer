@@ -2,28 +2,63 @@
   "name": "overseer",
   "version": "0.1.0",
   "private": true,
+  "description": "Android control app",
+  "author": "Aaron Watson",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",
     "@types/react": "16.9.5",
     "@types/react-dom": "16.9.1",
-    "electron": "^6.0.12",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
   },
   "main": "src/electron-starter.js",
+  "build": {
+    "appId": "io.github.aaronwatson2975",
+    "publish": "github",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "appImage": {
+      "license": "MIT"
+    },
+    "nsis": {
+      "createDesktopShortcut": "always",
+      "license": "MIT"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "electron ."
+    "electron": "electron .",
+    "release": "electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "repository": "https://github.com/aaronwatson2975/overseer",
+  "keywords": [
+    "electron",
+    "ci",
+    "travis",
+    "android",
+    "control"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,5 +70,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron-builder": "^21.2.0",
+    "electron": "^6.0.12"
   }
 }
