@@ -47,7 +47,7 @@
     "test": "CI=true react-scripts test",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "generate-documentation": "npx jsdoc -r ./src/ --destination ./documentation",
+    "generate-documentation": "npx jsdoc -r ./src/ --destination ./docs",
     "release": "electron-builder"
   },
   "eslintConfig": {
