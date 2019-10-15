@@ -1,4 +1,5 @@
 import { AndroidDevice, Connection } from "../enums";
+import { IAndroidDevice } from "../interfaces";
 
 /**
  * Data interface
@@ -13,7 +14,7 @@ import { AndroidDevice, Connection } from "../enums";
  * make and model exists in the collection
  */
 
-const mockDevices = [
+const mockDevices: IAndroidDevice[] = [
   {
     make: "Dragonboard",
     model: "820c",
@@ -26,11 +27,20 @@ const mockDevices = [
   {
     make: "Google",
     model: "Pixel 3a",
-    serial: "abcd1234",
+    serial: "a54bde3d",
     connection: Connection.USB,
     type: AndroidDevice.Phone,
     ip: "192.168.2.45",
-    duplicate: false
+    duplicate: true
+  },
+  {
+    make: "Google",
+    model: "Pixel 3a",
+    serial: "76cda2ea",
+    connection: Connection.USB,
+    type: AndroidDevice.Phone,
+    ip: "192.168.2.48",
+    duplicate: true
   },
   {
     make: "Google",
@@ -57,7 +67,7 @@ const mockDevices = [
     connection: Connection.USB,
     type: AndroidDevice.Phone,
     ip: "192.168.2.13",
-    duplicate: true
+    duplicate: false
   },
   {
     make: "Samsung",
@@ -66,7 +76,7 @@ const mockDevices = [
     connection: Connection.Network,
     type: AndroidDevice.Phone,
     ip: "192.168.2.13",
-    duplicate: true
+    duplicate: false
   },
   {
     make: "Raspberry Pi",

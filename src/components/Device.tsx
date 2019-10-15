@@ -8,22 +8,15 @@ import {
   NetworkWifi,
   Usb
 } from "@material-ui/icons";
+import { IAndroidDevice } from "../interfaces";
 
-interface Props {
-  make: string;
-  model: string;
-  serial: string;
-  duplicate: boolean;
-  type: AndroidDevice;
-  connection: Connection;
-}
-
-class Device extends Component<Props> {
+class Device extends Component<IAndroidDevice> {
   render() {
     let deviceIcon: JSX.Element = <PhoneAndroid />;
     let connectionIcon: JSX.Element = <Usb />;
-    const deviceName = `${this.props.make} ${this.props.model} ${this.props
-      .duplicate && this.props.serial}`;
+    const deviceName = `${this.props.make} ${this.props.model} ${
+      this.props.duplicate ? `(${this.props.serial})` : ""
+    }`;
 
     switch (this.props.type) {
       case AndroidDevice.Phone:
@@ -53,6 +46,7 @@ class Device extends Component<Props> {
       <ListItem button>
         <ListItemIcon>{deviceIcon}</ListItemIcon>
         <ListItemText primary={deviceName} />
+        <ListItemIcon>{connectionIcon}</ListItemIcon>
       </ListItem>
     );
   }

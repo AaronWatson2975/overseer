@@ -13,11 +13,21 @@ import {
 } from "@material-ui/icons";
 import { fetchDevices } from "../models";
 import { Device } from "./Device";
+import { IAndroidDevice } from "../interfaces";
 
-class DeviceList extends Component {
-  state = {
-    devices: []
-  };
+interface Props {}
+
+interface State {
+  devices: IAndroidDevice[];
+}
+
+class DeviceList extends Component<Props, State> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      devices: []
+    };
+  }
 
   componentDidMount() {
     fetchDevices().then(devices => {
@@ -37,7 +47,15 @@ class DeviceList extends Component {
         }
       >
         {this.state.devices.map(device => (
-          <Device props={device} />
+          <Device
+            make={device.make}
+            model={device.model}
+            serial={device.serial}
+            connection={device.connection}
+            ip={device.ip}
+            type={device.type}
+            duplicate={device.duplicate}
+          />
         ))}
       </List>
     );
