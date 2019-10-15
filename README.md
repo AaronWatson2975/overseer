@@ -36,6 +36,10 @@ This is the start of a new project to help make my life easier when working with
 ## Documentation
 The most up-to-date documentation can be found <a href="https://aaronwatson2975.github.io/overseer/">here</a>.
 
+## Branching Strategy and Versioning
+For this project I have chosen to use a GitFlow branching stategy.
+<br />
+<img src="https://gitversion.readthedocs.io/en/latest/git-branching-strategies/img/39f9d8b8b007c82f1f80_major-release.png" />
 
 
 
