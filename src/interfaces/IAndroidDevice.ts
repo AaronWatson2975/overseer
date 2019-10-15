@@ -8,4 +8,5 @@ export interface IAndroidDevice {
   duplicate: boolean;
   type: AndroidDevice;
   connection: Connection;
+  offline: boolean;
 }

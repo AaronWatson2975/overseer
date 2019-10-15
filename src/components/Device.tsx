@@ -16,7 +16,7 @@ class Device extends Component<IAndroidDevice> {
     let connectionIcon: JSX.Element = <Usb />;
     const deviceName = `${this.props.make} ${this.props.model} ${
       this.props.duplicate ? `(${this.props.serial})` : ""
-    }`;
+    }${this.props.offline ? "  (Device is offline)" : ""}`;
 
     switch (this.props.type) {
       case AndroidDevice.Phone:
@@ -43,7 +43,7 @@ class Device extends Component<IAndroidDevice> {
     }
 
     return (
-      <ListItem button>
+      <ListItem button disabled={this.props.offline}>
         <ListItemIcon>{deviceIcon}</ListItemIcon>
         <ListItemText primary={deviceName} />
         <ListItemIcon>{connectionIcon}</ListItemIcon>

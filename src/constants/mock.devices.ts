@@ -22,7 +22,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.USB,
     type: AndroidDevice.DevBoard,
     ip: "127.0.0.1",
-    duplicate: false
+    duplicate: false,
+    offline: false
   },
   {
     make: "Google",
@@ -31,7 +32,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.USB,
     type: AndroidDevice.Phone,
     ip: "192.168.2.45",
-    duplicate: true
+    duplicate: true,
+    offline: false
   },
   {
     make: "Google",
@@ -40,7 +42,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.USB,
     type: AndroidDevice.Phone,
     ip: "192.168.2.48",
-    duplicate: true
+    duplicate: true,
+    offline: false
   },
   {
     make: "Google",
@@ -49,7 +52,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.USB,
     type: AndroidDevice.Tablet,
     ip: "127.0.0.1",
-    duplicate: false
+    duplicate: false,
+    offline: false
   },
   {
     make: "Inforce",
@@ -58,7 +62,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.Network,
     type: AndroidDevice.DevBoard,
     ip: "192.168.2.15",
-    duplicate: false
+    duplicate: false,
+    offline: false
   },
   {
     make: "Samsung",
@@ -67,7 +72,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.USB,
     type: AndroidDevice.Phone,
     ip: "192.168.2.13",
-    duplicate: false
+    duplicate: false,
+    offline: false
   },
   {
     make: "Samsung",
@@ -76,7 +82,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.Network,
     type: AndroidDevice.Phone,
     ip: "192.168.2.13",
-    duplicate: false
+    duplicate: false,
+    offline: false
   },
   {
     make: "Raspberry Pi",
@@ -85,7 +92,8 @@ const mockDevices: IAndroidDevice[] = [
     connection: Connection.Network,
     type: AndroidDevice.DevBoard,
     ip: "192.168.2.76",
-    duplicate: false
+    duplicate: false,
+    offline: true
   }
 ];
 

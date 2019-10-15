@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { ListSubheader, List, CircularProgress } from "@material-ui/core";
+import {
+  ListSubheader,
+  List,
+  CircularProgress,
+  Button
+} from "@material-ui/core";
 import { fetchDevices } from "../models";
 import { Device } from "./Device";
 import { IAndroidDevice } from "../interfaces";
@@ -28,30 +33,36 @@ class DeviceList extends Component<Props, State> {
 
   render() {
     return (
-      <List
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="nested-list-subheader">
-            Connected Android Devices
-          </ListSubheader>
-        }
-      >
-        {!this.state.hasDevices && (
-          <CircularProgress className="centered-progress" />
-        )}
-        {this.state.devices.map(device => (
-          <Device
-            make={device.make}
-            model={device.model}
-            serial={device.serial}
-            connection={device.connection}
-            ip={device.ip}
-            type={device.type}
-            duplicate={device.duplicate}
-          />
-        ))}
-      </List>
+      <>
+        <List
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          subheader={
+            <ListSubheader component="div" id="nested-list-subheader">
+              Connected Android Devices
+            </ListSubheader>
+          }
+        >
+          {!this.state.hasDevices && (
+            <CircularProgress className="centered-progress" />
+          )}
+          {this.state.devices.map(device => (
+            <Device
+              make={device.make}
+              model={device.model}
+              serial={device.serial}
+              connection={device.connection}
+              ip={device.ip}
+              type={device.type}
+              duplicate={device.duplicate}
+              offline={device.offline}
+            />
+          ))}
+        </List>
+        <Button variant="outlined" color="primary">
+          Connect to IP
+        </Button>
+      </>
     );
   }
 }
