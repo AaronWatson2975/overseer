@@ -1,8 +1,10 @@
 import { mockDevices } from "../constants";
 
 function fetchDevices() {
-  return setTimeout(() => {
-    return mockDevices;
-  }, 1000);
+  return new Promise(function(resolve) {
+    setTimeout(() => {
+      resolve(mockDevices);
+    }, 2500);
+  });
 }
 export { fetchDevices };

@@ -1,2 +1,2 @@
-export * from "./Device";
+export * from "./AndroidDevice";
 export * from "./Connection";

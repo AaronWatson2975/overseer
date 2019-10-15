@@ -19,6 +19,12 @@ class DeviceList extends Component {
     devices: []
   };
 
+  componentDidMount() {
+    fetchDevices().then(devices => {
+      this.setState({ devices: devices });
+    });
+  }
+
   render() {
     return (
       <List
@@ -30,9 +36,9 @@ class DeviceList extends Component {
           </ListSubheader>
         }
       >
-        {this.state.devices.map(() => {
-          <p>I'm a device!</p>;
-        })}
+        {this.state.devices.map(device => (
+          <Device props={device} />
+        ))}
       </List>
     );
   }

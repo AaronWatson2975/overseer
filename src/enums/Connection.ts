@@ -1,6 +1,4 @@
-enum Connection {
+export enum Connection {
   USB,
   Network
 }
-
-export { Connection };
