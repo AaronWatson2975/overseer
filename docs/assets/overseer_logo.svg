@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 1024px;
+        text-anchor: middle;
+        font-family: "Droid Sans";
+      }
+
+      .cls-2, .cls-4 {
+        fill: #272822;
+      }
+
+      .cls-3 {
+        fill: #f9273c;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-1" cx="512" cy="517" rx="333" ry="244"/>
+  <text id="O" class="cls-2" transform="translate(145.61 512.928) rotate(90)"><tspan x="0">O</tspan></text>
+  <circle class="cls-3" cx="357" cy="465" r="47"/>
+  <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-3" cx="667" cy="465" r="47"/>
+  <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-4" x="375" y="587" width="273" height="58" rx="10" ry="10"/>
+  <rect class="cls-4" x="489" y="90" width="45" height="156"/>
+  <circle class="cls-3" cx="511.5" cy="66.5" r="51.5"/>
+</svg>
