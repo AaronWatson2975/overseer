@@ -13,13 +13,7 @@ This is the start of a new project to help make my life easier when working with
 ## Documentation
 The most up-to-date documentation can be found <a href="https://aaronwatson2975.github.io/overseer/">here</a>.
  
-## Stack
-<p float="left">
-  <img alt="reactjs logo" src="https://cdn.auth0.com/blog/react-js/react.png" width="70" />
-  <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="70" />
-  <img alt="typescript logo" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="50" />
-  <img alt="sass logo" src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" width="70" />
-</p>
+
 
 
 ## Status
@@ -37,6 +31,14 @@ The most up-to-date documentation can be found <a href="https://aaronwatson2975.
   <img alt="test coverage badge" src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=develop" />
   <img alt="code quality badge" src="https://api.codacy.com/project/badge/Grade/22e24de785134902b017645e21ddce21?isInternal=true&branch=develop" />
   </p>
+
+## Stack
+<p float="left">
+  <img alt="reactjs logo" src="https://cdn.auth0.com/blog/react-js/react.png" width="70" />
+  <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="70" />
+  <img alt="typescript logo" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="50" />
+  <img alt="sass logo" src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" width="70" />
+</p>
 
 ## CI, Testing and Documentation
 <p float="left">
