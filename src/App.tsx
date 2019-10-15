@@ -9,32 +9,11 @@ import {
 } from "@material-ui/core/styles";
 import { pink, blue } from "@material-ui/core/colors";
 
-function WithTheme() {
-  const theme = useTheme();
-  const primaryText = theme.palette.text.primary;
-  const primaryColor = theme.palette.primary.main;
-
-  const styles = {
-    primaryText: {
-      backgroundColor: theme.palette.background.default,
-      padding: theme.spacing(1, 2),
-      color: primaryText
-    },
-    primaryColor: {
-      backgroundColor: primaryColor,
-      padding: theme.spacing(1, 2),
-      color: theme.palette.common.white
-    }
-  };
-
-  return <DeviceList />;
-}
-
 const theme = createMuiTheme({
   palette: {
     primary: pink,
     secondary: blue,
-    type: "light"
+    type: "dark"
   }
 });
 
@@ -43,7 +22,7 @@ const App: React.FC = () => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <WithTheme />
+        <DeviceList />
       </ThemeProvider>
     </>
   );
