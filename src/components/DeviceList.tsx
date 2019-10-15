@@ -1,16 +1,5 @@
 import React, { Component } from "react";
-import {
-  ListSubheader,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText
-} from "@material-ui/core";
-import {
-  PhoneAndroid,
-  TabletAndroid,
-  DeveloperBoard
-} from "@material-ui/icons";
+import { ListSubheader, List, CircularProgress } from "@material-ui/core";
 import { fetchDevices } from "../models";
 import { Device } from "./Device";
 import { IAndroidDevice } from "../interfaces";
@@ -19,19 +8,21 @@ interface Props {}
 
 interface State {
   devices: IAndroidDevice[];
+  hasDevices: boolean;
 }
 
 class DeviceList extends Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      devices: []
+      devices: [],
+      hasDevices: false
     };
   }
 
   componentDidMount() {
     fetchDevices().then(devices => {
-      this.setState({ devices: devices });
+      this.setState({ devices: devices, hasDevices: true });
     });
   }
 
@@ -46,6 +37,9 @@ class DeviceList extends Component<Props, State> {
           </ListSubheader>
         }
       >
+        {!this.state.hasDevices && (
+          <CircularProgress className="centered-progress" />
+        )}
         {this.state.devices.map(device => (
           <Device
             make={device.make}
