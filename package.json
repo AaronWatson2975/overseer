@@ -48,6 +48,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "CI=true react-scripts test --coverage",
+    "test-windows": "react-scripts test --coverage",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "eject": "react-scripts eject",
     "electron": "electron .",
