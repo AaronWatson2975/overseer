@@ -31,7 +31,7 @@ class DeviceList extends Component<IProps> {
             <CircularProgress className="centered-progress" />
           )}
           {this.props.devices.map(device => (
-            <Device device={device} />
+            <Device key={device.serial} device={device} />
           ))}
         </List>
         <Button variant="outlined" color="primary">
