@@ -45,7 +45,7 @@ The most up-to-date documentation can be found <a href="https://aaronwatson2975.
   <img alt="travis-ci logo" src="https://travis-ci.com/images/logos/Tessa-1.png" width="70" />
   <img alt="jest logo" src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="60" />
   <img alt="enzyme logo" src="https://clipart.info/images/ccovers/1499955328airbnb-2-logo-png.png" width="70" />
-  <img alt="jsdoc logo" src="https://blog.michelletorres.mx/wp-content/uploads/2017/10/jsdoc-logo.jpg" width="70" /> 
+  <img alt="typedoc logo" src="https://www.sitepen.com/blog/wp-content/uploads/2017/04/typedoc.png" width="70" /> 
 </p>
 
 ## Branching Strategy and Versioning
@@ -76,7 +76,7 @@ Launch a running version of the app in electron and connect it to the dev server
 
 ### `yarn generate-documentation`
 
-Runs JSDoc to update all the documentation for the project.
+Runs TypeDoc to update all the documentation for the project.
 
 
 ### `yarn test`
