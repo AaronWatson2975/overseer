@@ -10,6 +10,10 @@ import {
 } from "@material-ui/icons";
 import { IAndroidDevice } from "../interfaces";
 
+/**
+ * A single ListItem that displays the make, model, type,
+ * connection type, and offline status of an Android device.
+ */
 class Device extends Component<IAndroidDevice> {
   render() {
     let deviceIcon: JSX.Element = <PhoneAndroid />;

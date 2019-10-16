@@ -51,7 +51,7 @@
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "generate-documentation": "npx jsdoc -r ./src/ --destination ./docs",
+    "generate-documentation": "npx typedoc --out docs ./src",
     "release": "electron-builder"
   },
   "eslintConfig": {
