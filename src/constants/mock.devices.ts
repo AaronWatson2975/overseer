@@ -23,7 +23,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.DevBoard,
     ip: "127.0.0.1",
     duplicate: false,
-    offline: false
+    offline: false,
   },
   {
     make: "Google",
@@ -33,7 +33,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.Phone,
     ip: "192.168.2.45",
     duplicate: true,
-    offline: false
+    offline: false,
   },
   {
     make: "Google",
@@ -43,7 +43,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.Phone,
     ip: "192.168.2.48",
     duplicate: true,
-    offline: false
+    offline: false,
   },
   {
     make: "Google",
@@ -53,7 +53,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.Tablet,
     ip: "127.0.0.1",
     duplicate: false,
-    offline: false
+    offline: false,
   },
   {
     make: "Inforce",
@@ -63,7 +63,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.DevBoard,
     ip: "192.168.2.15",
     duplicate: false,
-    offline: false
+    offline: false,
   },
   {
     make: "Samsung",
@@ -73,7 +73,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.Phone,
     ip: "192.168.2.13",
     duplicate: false,
-    offline: false
+    offline: false,
   },
   {
     make: "Samsung",
@@ -83,7 +83,7 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.Phone,
     ip: "192.168.2.13",
     duplicate: false,
-    offline: false
+    offline: false,
   },
   {
     make: "Raspberry Pi",
@@ -93,8 +93,8 @@ const mockDevices: IAndroidDevice[] = [
     type: AndroidDevice.DevBoard,
     ip: "192.168.2.76",
     duplicate: false,
-    offline: true
-  }
+    offline: true,
+  },
 ];
 
 export { mockDevices };

@@ -1,9 +1,11 @@
 # Overseer
-This is the start of a new project to help make my life easier when working with Android devices.  Stay tuned for more details.
+
+This is the start of a new project to help make my life easier when working with Android devices. Stay tuned for more details.
 
 ## Status
 
 ### Master
+
 <p float="left">
   <img alt="build status badge" src="https://travis-ci.com/AaronWatson2975/overseer.svg?branch=master"/>
   <img alt="test coverage badge" src="https://coveralls.io/repos/github/AaronWatson2975/overseer/badge.svg?branch=master" />
@@ -18,6 +20,7 @@ This is the start of a new project to help make my life easier when working with
   </p>
 
 ## Stack
+
 <p float="left">
   <img alt="reactjs logo" src="https://cdn.auth0.com/blog/react-js/react.png" width="70" />
   <img alt="electron logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png" width="70" />
@@ -26,6 +29,7 @@ This is the start of a new project to help make my life easier when working with
 </p>
 
 ## CI, Testing and Documentation
+
 <p float="left">
   <img alt="travis-ci logo" src="https://travis-ci.com/images/logos/Tessa-1.png" width="70" />
   <img alt="jest logo" src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="60" />
@@ -34,12 +38,8 @@ This is the start of a new project to help make my life easier when working with
 </p>
 
 ## Documentation
+
 The most up-to-date documentation can be found <a href="https://aaronwatson2975.github.io/overseer/">here</a>.
-
-
-
-
-
 
 ## Available Scripts
 
@@ -53,15 +53,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-
 ### `yarn run electron`
-Launch a running version of the app in electron and connect it to the dev server running on port 3000, this will allow live real time updates to the app as you develop.
 
+Launch a running version of the app in electron and connect it to the dev server running on port 3000, this will allow live real time updates to the app as you develop.
 
 ### `yarn generate-documentation`
 
 Runs JSDoc to update all the documentation for the project.
-
 
 ### `yarn test`
 

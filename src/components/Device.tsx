@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { AndroidDevice, Connection } from "../enums";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import {
-  PhoneAndroid,
-  TabletAndroid,
   DeveloperBoard,
   NetworkWifi,
-  Usb
+  PhoneAndroid,
+  TabletAndroid,
+  Usb,
 } from "@material-ui/icons";
 import { IAndroidDevice } from "../interfaces";
 
@@ -15,7 +15,7 @@ import { IAndroidDevice } from "../interfaces";
  * connection type, and offline status of an Android device.
  */
 class Device extends Component<IAndroidDevice> {
-  render() {
+  public render() {
     let deviceIcon: JSX.Element = <PhoneAndroid />;
     let connectionIcon: JSX.Element = <Usb />;
     const deviceName = `${this.props.make} ${this.props.model} ${

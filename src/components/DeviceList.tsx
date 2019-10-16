@@ -1,37 +1,35 @@
 import React, { Component } from "react";
 import {
-  ListSubheader,
-  List,
+  Button,
   CircularProgress,
-  Button
+  List,
+  ListSubheader,
 } from "@material-ui/core";
 import { fetchDevices } from "../models";
 import { Device } from "./Device";
 import { IAndroidDevice } from "../interfaces";
 
-interface Props {}
-
-interface State {
+interface IState {
   devices: IAndroidDevice[];
   hasDevices: boolean;
 }
 
-class DeviceList extends Component<Props, State> {
+class DeviceList extends Component<{}, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
       devices: [],
-      hasDevices: false
+      hasDevices: false,
     };
   }
 
-  componentDidMount() {
-    fetchDevices().then(devices => {
-      this.setState({ devices: devices, hasDevices: true });
+  public componentDidMount() {
+    fetchDevices().then(dev => {
+      this.setState({ devices: dev, hasDevices: true });
     });
   }
 
-  render() {
+  public render() {
     return (
       <>
         <List
