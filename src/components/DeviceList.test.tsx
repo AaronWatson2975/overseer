@@ -1,27 +1,52 @@
 import { shallow } from "enzyme";
 import React from "react";
 import { mockDevices } from "../constants";
+import { MockCommunicator } from "../models";
 import { DeviceList } from "./DeviceList";
+
+const mockCommunicator = new MockCommunicator();
 
 describe("doesn't crash", () => {
   it("renders without crashing", () => {
-    shallow(<DeviceList devices={mockDevices} hasDevices={true} />);
+    shallow(
+      <DeviceList
+        communicator={mockCommunicator}
+        devices={mockDevices}
+        hasDevices={true}
+      />
+    );
   });
 });
 
 test("basic snapshot test", () => {
   const wrapper = shallow(
-    <DeviceList devices={mockDevices} hasDevices={true} />
+    <DeviceList
+      communicator={mockCommunicator}
+      devices={mockDevices}
+      hasDevices={true}
+    />
   );
   expect(wrapper).toMatchSnapshot();
 });
 
 test("zero state", () => {
-  const wrapper = shallow(<DeviceList devices={[]} hasDevices={true} />);
+  const wrapper = shallow(
+    <DeviceList
+      communicator={mockCommunicator}
+      devices={[]}
+      hasDevices={true}
+    />
+  );
   expect(wrapper).toMatchSnapshot();
 });
 
 test("loading", () => {
-  const wrapper = shallow(<DeviceList devices={[]} hasDevices={false} />);
+  const wrapper = shallow(
+    <DeviceList
+      communicator={mockCommunicator}
+      devices={[]}
+      hasDevices={false}
+    />
+  );
   expect(wrapper).toMatchSnapshot();
 });

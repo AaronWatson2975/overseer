@@ -5,11 +5,11 @@ import {
   ListSubheader,
 } from "@material-ui/core";
 import React, { Component } from "react";
-import { IAndroidDevice } from "../interfaces";
-import { fetchDevices } from "../models";
+import { IAndroidDevice, ICommunicator } from "../interfaces";
 import { Device } from "./Device";
 
 interface IProps {
+  communicator: ICommunicator;
   devices: IAndroidDevice[];
   hasDevices: boolean;
 }
