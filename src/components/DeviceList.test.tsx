@@ -1,7 +1,7 @@
 import { shallow } from "enzyme";
 import React from "react";
-import { DeviceList } from "./DeviceList";
 import { mockDevices } from "../constants";
+import { DeviceList } from "./DeviceList";
 
 describe("doesn't crash", () => {
   it("renders without crashing", () => {
