@@ -1,7 +1,7 @@
 enum AndroidDevice {
+  DevBoard,
   Phone,
   Tablet,
-  DevBoard
 }
 
 export { AndroidDevice };

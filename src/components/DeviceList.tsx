@@ -1,13 +1,13 @@
-import React, { Component } from "react";
 import {
   Button,
   CircularProgress,
   List,
   ListSubheader,
 } from "@material-ui/core";
+import React, { Component } from "react";
+import { IAndroidDevice } from "../interfaces";
 import { fetchDevices } from "../models";
 import { Device } from "./Device";
-import { IAndroidDevice } from "../interfaces";
 
 interface IState {
   devices: IAndroidDevice[];

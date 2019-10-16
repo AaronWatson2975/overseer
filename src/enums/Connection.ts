@@ -1,4 +1,4 @@
 export enum Connection {
+  Network,
   USB,
-  Network
 }

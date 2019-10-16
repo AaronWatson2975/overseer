@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-import { AndroidDevice, Connection } from "../enums";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import {
   DeveloperBoard,
@@ -8,6 +6,8 @@ import {
   TabletAndroid,
   Usb,
 } from "@material-ui/icons";
+import React, { Component } from "react";
+import { AndroidDevice, Connection } from "../enums";
 import { IAndroidDevice } from "../interfaces";
 
 /**
