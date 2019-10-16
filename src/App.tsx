@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <DeviceList />
+        <DeviceList devices={[]} hasDevices={true} />
       </ThemeProvider>
     </>
   );

@@ -81,6 +81,15 @@
   "devDependencies": {
     "coveralls": "^3.0.7",
     "electron": "^6.0.12",
-    "electron-builder": "^21.2.0"
+    "electron-builder": "^21.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.2",
+    "react-test-renderer": "^16.10.2"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

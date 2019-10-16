@@ -9,26 +9,12 @@ import { IAndroidDevice } from "../interfaces";
 import { fetchDevices } from "../models";
 import { Device } from "./Device";
 
-interface IState {
+interface IProps {
   devices: IAndroidDevice[];
   hasDevices: boolean;
 }
 
-class DeviceList extends Component<{}, IState> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      devices: [],
-      hasDevices: false,
-    };
-  }
-
-  public componentDidMount() {
-    fetchDevices().then(dev => {
-      this.setState({ devices: dev, hasDevices: true });
-    });
-  }
-
+class DeviceList extends Component<IProps> {
   public render() {
     return (
       <>
@@ -41,20 +27,11 @@ class DeviceList extends Component<{}, IState> {
             </ListSubheader>
           }
         >
-          {!this.state.hasDevices && (
+          {!this.props.hasDevices && (
             <CircularProgress className="centered-progress" />
           )}
-          {this.state.devices.map(device => (
-            <Device
-              make={device.make}
-              model={device.model}
-              serial={device.serial}
-              connection={device.connection}
-              ip={device.ip}
-              type={device.type}
-              duplicate={device.duplicate}
-              offline={device.offline}
-            />
+          {this.props.devices.map(device => (
+            <Device device={device} />
           ))}
         </List>
         <Button variant="outlined" color="primary">

@@ -10,19 +10,23 @@ import React, { Component } from "react";
 import { AndroidDevice, Connection } from "../enums";
 import { IAndroidDevice } from "../interfaces";
 
+interface IProps {
+  device: IAndroidDevice;
+}
+
 /**
  * A single ListItem that displays the make, model, type,
  * connection type, and offline status of an Android device.
  */
-class Device extends Component<IAndroidDevice> {
+class Device extends Component<IProps> {
   public render() {
     let deviceIcon: JSX.Element = <PhoneAndroid />;
     let connectionIcon: JSX.Element = <Usb />;
-    const deviceName = `${this.props.make} ${this.props.model} ${
-      this.props.duplicate ? `(${this.props.serial})` : ""
-    }${this.props.offline ? "  (Device is offline)" : ""}`;
+    const deviceName = `${this.props.device.make} ${this.props.device.model} ${
+      this.props.device.duplicate ? `(${this.props.device.serial})` : ""
+    }${this.props.device.offline ? "  (Device is offline)" : ""}`;
 
-    switch (this.props.type) {
+    switch (this.props.device.type) {
       case AndroidDevice.Phone:
         deviceIcon = <PhoneAndroid />;
         break;
@@ -36,7 +40,7 @@ class Device extends Component<IAndroidDevice> {
         break;
     }
 
-    switch (this.props.connection) {
+    switch (this.props.device.connection) {
       case Connection.USB:
         connectionIcon = <Usb />;
         break;
@@ -47,7 +51,7 @@ class Device extends Component<IAndroidDevice> {
     }
 
     return (
-      <ListItem button disabled={this.props.offline}>
+      <ListItem button disabled={this.props.device.offline}>
         <ListItemIcon>{deviceIcon}</ListItemIcon>
         <ListItemText primary={deviceName} />
         <ListItemIcon>{connectionIcon}</ListItemIcon>
