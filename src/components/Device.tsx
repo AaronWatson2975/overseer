@@ -16,7 +16,8 @@ interface IProps {
 
 /**
  * A single ListItem that displays the make, model, type,
- * connection type, and offline status of an Android device.
+ * connection type, and offline status of an Android device
+ * connected over ADB.
  */
 class Device extends Component<IProps> {
   public render() {
