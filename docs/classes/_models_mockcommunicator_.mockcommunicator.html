@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>State | overseer</title>
+	<title>MockCommunicator | overseer</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_components_devicelist_.html">&quot;components/DeviceList&quot;</a>
+					<a href="../modules/_models_mockcommunicator_.html">&quot;models/MockCommunicator&quot;</a>
 				</li>
 				<li>
-					<a href="_components_devicelist_.state.html">State</a>
+					<a href="_models_mockcommunicator_.mockcommunicator.html">MockCommunicator</a>
 				</li>
 			</ul>
-			<h1>Interface State</h1>
+			<h1>Class MockCommunicator</h1>
 		</div>
 	</div>
 </header>
@@ -73,8 +73,14 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">State</span>
+						<span class="target">MockCommunicator</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/_interfaces_icommunicator_.icommunicator.html" class="tsd-signature-type">ICommunicator</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -82,36 +88,58 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_components_devicelist_.state.html#devices" class="tsd-kind-icon">devices</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_components_devicelist_.state.html#hasdevices" class="tsd-kind-icon">has<wbr>Devices</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_models_mockcommunicator_.mockcommunicator.html#connect" class="tsd-kind-icon">connect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_models_mockcommunicator_.mockcommunicator.html#fetchdevices" class="tsd-kind-icon">fetch<wbr>Devices</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="devices" class="tsd-anchor"></a>
-					<h3>devices</h3>
-					<div class="tsd-signature tsd-kind-icon">devices<span class="tsd-signature-symbol">:</span> <a href="_interfaces_iandroiddevice_.iandroiddevice.html" class="tsd-signature-type">IAndroidDevice</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AaronWatson2975/overseer/blob/61048a9/src/components/DeviceList.tsx#L15">components/DeviceList.tsx:15</a></li>
-						</ul>
-					</aside>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="connect" class="tsd-anchor"></a>
+					<h3>connect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span>device<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_interfaces_icommunicator_.icommunicator.html">ICommunicator</a>.<a href="../interfaces/_interfaces_icommunicator_.icommunicator.html#connect">connect</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/AaronWatson2975/overseer/blob/093dbf6/src/models/MockCommunicator.ts#L5">models/MockCommunicator.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>device: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="hasdevices" class="tsd-anchor"></a>
-					<h3>has<wbr>Devices</h3>
-					<div class="tsd-signature tsd-kind-icon">has<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AaronWatson2975/overseer/blob/61048a9/src/components/DeviceList.tsx#L16">components/DeviceList.tsx:16</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="fetchdevices" class="tsd-anchor"></a>
+					<h3>fetch<wbr>Devices</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Devices<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_interfaces_iandroiddevice_.iandroiddevice.html" class="tsd-signature-type">IAndroidDevice</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_interfaces_icommunicator_.icommunicator.html">ICommunicator</a>.<a href="../interfaces/_interfaces_icommunicator_.icommunicator.html#fetchdevices">fetchDevices</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/AaronWatson2975/overseer/blob/093dbf6/src/models/MockCommunicator.ts#L9">models/MockCommunicator.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_interfaces_iandroiddevice_.iandroiddevice.html" class="tsd-signature-type">IAndroidDevice</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -130,11 +158,23 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_components_device_.html">"components/<wbr>Device"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_device_test_.html">"components/<wbr>Device.test"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_deviceconnection_.html">"components/<wbr>Device<wbr>Connection"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_components_devicelist_.html">"components/<wbr>Device<wbr>List"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_devicelist_test_.html">"components/<wbr>Device<wbr>List.test"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_components_index_.html">"components/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_constants_adb_.html">"constants/adb"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_constants_index_.html">"constants/index"</a>
@@ -155,16 +195,22 @@
 						<a href="../modules/_enums_index_.html">"enums/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_enums_index_.html">"enums/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_interfaces_iandroiddevice_.html">"interfaces/IAndroid<wbr>Device"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_interfaces_index_.html">"interfaces/index"</a>
+						<a href="../modules/_interfaces_icommunicator_.html">"interfaces/ICommunicator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_models_fake_backend_.html">"models/fake.backend"</a>
+						<a href="../modules/_interfaces_index_.html">"interfaces/index"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_models_mockcommunicator_.html">"models/<wbr>Mock<wbr>Communicator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_models_index_.html">"models/index"</a>
@@ -172,26 +218,23 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_serviceworker_.html">"service<wbr>Worker"</a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_setuptests_.html">"setup<wbr>Tests"</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../classes/_components_devicelist_.devicelist.html" class="tsd-kind-icon">Device<wbr>List</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_components_devicelist_.props.html" class="tsd-kind-icon">Props</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_components_devicelist_.state.html" class="tsd-kind-icon">State</a>
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_models_mockcommunicator_.mockcommunicator.html" class="tsd-kind-icon">Mock<wbr>Communicator</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_components_devicelist_.state.html#devices" class="tsd-kind-icon">devices</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_models_mockcommunicator_.mockcommunicator.html#connect" class="tsd-kind-icon">connect</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_components_devicelist_.state.html#hasdevices" class="tsd-kind-icon">has<wbr>Devices</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_models_mockcommunicator_.mockcommunicator.html#fetchdevices" class="tsd-kind-icon">fetch<wbr>Devices</a>
 							</li>
 						</ul>
 					</li>
