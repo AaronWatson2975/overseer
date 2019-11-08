@@ -46,7 +46,8 @@ before_script:
 # on PRs and merges to master and prod run tests and build the app
 script:
   - node -v
-  - yarn install
+  - yarn -v
+  - yarn install --no-node-version-check
   - yarn test
   - yarn report-coverage
   - |
