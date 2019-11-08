@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic snapshot test 1`] = `
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  disabled={false}
+>
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <DeveloperBoardIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="Dragonboard 820c "
+  />
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <UsbIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+</WithStyles(ForwardRef(ListItem))>
+`;
+
+exports[`duplicate test 1`] = `
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  disabled={false}
+>
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <PhoneAndroidIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="Google Pixel 3a (a54bde3d)"
+  />
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <UsbIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+</WithStyles(ForwardRef(ListItem))>
+`;
+
+exports[`offline test 1`] = `
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  disabled={true}
+>
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <DeveloperBoardIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="Raspberry Pi 3b   (Device is offline)"
+  />
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <NetworkWifiIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+</WithStyles(ForwardRef(ListItem))>
+`;

@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic snapshot test 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(List))
+    aria-labelledby="nested-list-subheader"
+    component="nav"
+    subheader={
+      <ForwardRef(WithStyles)
+        component="div"
+        id="nested-list-subheader"
+      >
+        Connected Android Devices
+      </ForwardRef(WithStyles)>
+    }
+  >
+    <Device
+      device={
+        Object {
+          "connection": 1,
+          "duplicate": false,
+          "ip": "127.0.0.1",
+          "make": "Dragonboard",
+          "model": "820c",
+          "offline": false,
+          "serial": "c0ffee11",
+          "type": 0,
+        }
+      }
+      key="c0ffee11"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 1,
+          "duplicate": true,
+          "ip": "192.168.2.45",
+          "make": "Google",
+          "model": "Pixel 3a",
+          "offline": false,
+          "serial": "a54bde3d",
+          "type": 1,
+        }
+      }
+      key="a54bde3d"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 1,
+          "duplicate": true,
+          "ip": "192.168.2.48",
+          "make": "Google",
+          "model": "Pixel 3a",
+          "offline": false,
+          "serial": "76cda2ea",
+          "type": 1,
+        }
+      }
+      key="76cda2ea"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 1,
+          "duplicate": false,
+          "ip": "127.0.0.1",
+          "make": "Google",
+          "model": "Pixel C",
+          "offline": false,
+          "serial": "1234abcd",
+          "type": 2,
+        }
+      }
+      key="1234abcd"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 0,
+          "duplicate": false,
+          "ip": "192.168.2.15",
+          "make": "Inforce",
+          "model": "6640",
+          "offline": false,
+          "serial": "c0ffee22",
+          "type": 0,
+        }
+      }
+      key="c0ffee22"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 1,
+          "duplicate": false,
+          "ip": "192.168.2.13",
+          "make": "Samsung",
+          "model": "Galaxy S6",
+          "offline": false,
+          "serial": "68cd4ef2",
+          "type": 1,
+        }
+      }
+      key="68cd4ef2"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 0,
+          "duplicate": false,
+          "ip": "192.168.2.13",
+          "make": "Samsung",
+          "model": "Galaxy S6",
+          "offline": false,
+          "serial": "68cd4ef2",
+          "type": 1,
+        }
+      }
+      key="68cd4ef2"
+    />
+    <Device
+      device={
+        Object {
+          "connection": 0,
+          "duplicate": false,
+          "ip": "192.168.2.76",
+          "make": "Raspberry Pi",
+          "model": "3b",
+          "offline": true,
+          "serial": "c0ffee32",
+          "type": 0,
+        }
+      }
+      key="c0ffee32"
+    />
+  </WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(Button))
+    color="primary"
+    variant="outlined"
+  >
+    Connect to IP
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
+`;
+
+exports[`loading 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(List))
+    aria-labelledby="nested-list-subheader"
+    component="nav"
+    subheader={
+      <ForwardRef(WithStyles)
+        component="div"
+        id="nested-list-subheader"
+      >
+        Connected Android Devices
+      </ForwardRef(WithStyles)>
+    }
+  >
+    <WithStyles(ForwardRef(CircularProgress))
+      className="centered-progress"
+    />
+  </WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(Button))
+    color="primary"
+    variant="outlined"
+  >
+    Connect to IP
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
+`;
+
+exports[`zero state 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(List))
+    aria-labelledby="nested-list-subheader"
+    component="nav"
+    subheader={
+      <ForwardRef(WithStyles)
+        component="div"
+        id="nested-list-subheader"
+      >
+        Connected Android Devices
+      </ForwardRef(WithStyles)>
+    }
+  />
+  <WithStyles(ForwardRef(Button))
+    color="primary"
+    variant="outlined"
+  >
+    Connect to IP
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
+`;
