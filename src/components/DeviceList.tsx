@@ -9,6 +9,7 @@ import React, { Component } from "react";
 import { IAndroidDevice } from "../interfaces";
 import { Connection, AndroidDevice } from "../enums";
 import { Device } from "./Device";
+import { Promise } from "bluebird";
 
 const remote = window.require("electron").remote;
 const adb = remote.require("adbkit");
@@ -32,6 +33,12 @@ class DeviceList extends Component<{}, DeviceListState> {
     var that = this;
     this.setState({
       devices: [],
+    });
+
+    client.listDevices().then(function(devices: any) {
+      return Promise.map(devices, function(device: any) {
+        console.log(device);
+      });
     });
 
     client
