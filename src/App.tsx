@@ -2,7 +2,7 @@ import { CssBaseline } from "@material-ui/core";
 import { blue, pink } from "@material-ui/core/colors";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import React from "react";
-import { DeviceConnection } from "./components/DeviceConnection";
+import { DeviceConnection, DeviceList } from "./components";
 import { MockCommunicator } from "./models";
 import "./stylesheets/Main.scss";
 
@@ -21,8 +21,8 @@ const App: React.FC = () => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/* <DeviceList devices={[]} hasDevices={true} /> */}
-        <DeviceConnection communicator={COMMUNICATOR} />
+        <DeviceList />
+        {/* <DeviceConnection communicator={COMMUNICATOR} /> */}
       </ThemeProvider>
     </>
   );
