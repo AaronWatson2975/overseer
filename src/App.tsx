@@ -8,9 +8,9 @@ import "./stylesheets/Main.scss";
 
 const theme = createMuiTheme({
   palette: {
-    primary: pink,
-    secondary: blue,
-    type: "light",
+    primary: blue,
+    secondary: pink,
+    type: "dark",
   },
 });
 

@@ -10,13 +10,14 @@ import { IAndroidDevice } from "../interfaces";
 import { Connection, AndroidDevice } from "../enums";
 import { Device } from "./Device";
 import { Promise } from "bluebird";
+import { fetchAddress, validateIpAndPort } from "../tools";
 
 const remote = window.require("electron").remote;
 const adb = remote.require("adbkit");
 
 type DeviceListState = {
   devices: IAndroidDevice[];
-  hasDevices: Boolean;
+  hasDevices: boolean;
 };
 
 class DeviceList extends Component<{}, DeviceListState> {
@@ -31,55 +32,32 @@ class DeviceList extends Component<{}, DeviceListState> {
     const client = adb.createClient();
 
     var that = this;
-    this.setState({
-      devices: [],
-    });
 
     client.listDevices().then(function(devices: any) {
-      return Promise.map(devices, function(device: any) {
-        console.log(device);
+      const promise = Promise.map(devices, function(device: any) {
+        client.getProperties(device.id, (err: any, props: any) => {
+          const android = that.convertDevice(device, props);
+          that.addDevice(android);
+        });
       });
+      that.setState({
+        hasDevices: true,
+      });
+      return promise;
     });
 
     client
       .trackDevices()
       .then(function(tracker: any) {
         tracker.on("add", function(device: any) {
-          //Get properties
-          console.log("Device %s was plugged in", device.id);
-          console.log(device);
-
           client.getProperties(device.id, (err: any, props: any) => {
-            let serial = props["ro.boot.serialno"];
-            let make = props["ro.product.manufacturer"];
-            let model = props["ro.product.model"];
-            let connection =
-              serial === device.id ? Connection.USB : Connection.Network;
-
-            let duplicate = false;
-            let offline = false;
-
-            let android: IAndroidDevice = {
-              connection,
-              make,
-              model,
-              serial,
-              duplicate,
-              offline,
-              type: AndroidDevice.DevBoard,
-              ip: "192.168.2.35",
-            };
-
-            let devices = that.state.devices;
-            devices.push(android);
-            that.setState({
-              devices,
-            });
-            console.log(devices);
+            const android = that.convertDevice(device, props);
+            that.addDevice(android);
           });
         });
         tracker.on("remove", function(device: any) {
-          console.log("Device %s was unplugged", device.id);
+          console.log(device);
+          that.removeDevice(device.id);
         });
         tracker.on("end", function() {
           console.log("Tracking stopped");
@@ -117,6 +95,97 @@ class DeviceList extends Component<{}, DeviceListState> {
         </Button> */}
       </>
     );
+  }
+
+  private convertDevice(device: any, props: any): IAndroidDevice {
+    const serial = props["ro.boot.serialno"];
+    const make = props["ro.product.manufacturer"];
+    const model = props["ro.product.model"];
+    const connection =
+      serial === device.id ? Connection.USB : Connection.Network;
+
+    const ip = validateIpAndPort(device.id) ? fetchAddress(device.id) : "";
+
+    const offline = false;
+
+    const android: IAndroidDevice = {
+      connection,
+      duplicate: false,
+      ip,
+      make,
+      model,
+      offline,
+      serial,
+      type: AndroidDevice.DevBoard,
+    };
+
+    return android;
+  }
+
+  private addDevice(device: IAndroidDevice): void {
+    if (this.constainsDevice(device, true)) {
+      return;
+    }
+
+    let devices = this.state.devices;
+    devices.push(device);
+    this.setState({
+      devices,
+    });
+  }
+
+  private removeDevice(id: string): void {
+    const devices = this.state.devices;
+
+    const connectionType = validateIpAndPort(id)
+      ? Connection.Network
+      : Connection.USB;
+
+    const ip = validateIpAndPort(id) ? fetchAddress(id) : "";
+
+    const newDevices = devices.filter((device, index) => {
+      if (
+        connectionType === Connection.USB &&
+        device.connection === Connection.USB
+      ) {
+        if (device.serial === id) {
+          return false;
+        }
+      } else {
+        if (device.ip === ip) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    });
+
+    this.setState({
+      devices: newDevices,
+    });
+  }
+
+  private constainsDevice(
+    device: IAndroidDevice,
+    exactMatch: boolean
+  ): boolean {
+    const devices = this.state.devices;
+
+    devices.forEach(element => {
+      if (device.serial === element.serial) {
+        if (exactMatch) {
+          if (
+            device.connection === element.connection &&
+            device.ip === element.ip
+          ) {
+            return true;
+          }
+        } else {
+          return true;
+        }
+      }
+    });
+    return false;
   }
 }
 
