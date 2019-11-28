@@ -119,11 +119,13 @@ class DeviceList extends Component<{}, DeviceListState> {
       type: AndroidDevice.DevBoard,
     };
 
+    android.duplicate = this.isDuplicate(android);
+
     return android;
   }
 
   private addDevice(device: IAndroidDevice): void {
-    if (this.constainsDevice(device, true)) {
+    if (this.containsDevice(device, true)) {
       return;
     }
 
@@ -165,10 +167,22 @@ class DeviceList extends Component<{}, DeviceListState> {
     });
   }
 
-  private constainsDevice(
-    device: IAndroidDevice,
-    exactMatch: boolean
-  ): boolean {
+  private isDuplicate(device: IAndroidDevice): boolean {
+    const devices = this.state.devices;
+
+    devices.forEach(element => {
+      if (
+        device.make === element.make &&
+        device.model === element.model &&
+        element.connection === device.connection
+      ) {
+        return true;
+      }
+    });
+    return false;
+  }
+
+  private containsDevice(device: IAndroidDevice, exactMatch: boolean): boolean {
     const devices = this.state.devices;
 
     devices.forEach(element => {
